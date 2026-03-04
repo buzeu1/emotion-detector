@@ -13,7 +13,7 @@ export default function Home() {
     <main className="flex flex-col md:flex-row h-dvh md:h-screen bg-gray-950 text-white overflow-hidden">
 
       {/* ── Sus (mobil) / Stanga (desktop): camera video cu overlay canvas ── */}
-      <div className="flex-[3] min-h-0 md:flex-1 overflow-hidden md:flex md:items-center md:justify-center md:p-6">
+      <div className="flex-1 min-h-0 md:flex-1 overflow-hidden md:flex md:items-center md:justify-center md:p-6">
         <WebcamCapture onRezultat={setRezultat} />
       </div>
 

@@ -26,7 +26,7 @@ export default function EmotionOverlay({ rezultat }: Props) {
   const fatagasita   = rezultat !== null && rezultat.emotie_dominanta !== null
 
   return (
-    <aside className="flex-[2] overflow-y-auto md:flex-none w-full md:w-72 md:min-h-screen bg-gray-900 border-t md:border-t-0 md:border-l border-gray-800 flex flex-col p-4 md:p-6 gap-4 md:gap-6">
+    <aside className="flex-1 overflow-y-auto md:flex-none w-full md:w-72 md:min-h-screen bg-gray-900 border-t md:border-t-0 md:border-l border-gray-800 flex flex-col p-4 md:p-6 gap-4 md:gap-6">
 
       {/* ── Poza emotiei + Emotia dominanta ── */}
       <div className="flex md:flex-col items-center gap-4 md:pt-4">
