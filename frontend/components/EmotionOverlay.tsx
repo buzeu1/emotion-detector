@@ -26,41 +26,43 @@ export default function EmotionOverlay({ rezultat }: Props) {
   const fatagasita   = rezultat !== null && rezultat.emotie_dominanta !== null
 
   return (
-    <aside className="w-72 min-h-screen bg-gray-900 border-l border-gray-800 flex flex-col p-6 gap-6">
+    <aside className="w-full md:w-72 md:min-h-screen bg-gray-900 border-t md:border-t-0 md:border-l border-gray-800 flex flex-col p-4 md:p-6 gap-4 md:gap-6">
 
       {/* ── Poza emotiei + Emotia dominanta ── */}
-      <div className="flex flex-col items-center gap-2 pt-4">
+      <div className="flex md:flex-col items-center gap-4 md:pt-4">
         <img
           src={config.poza}
           alt={config.nume}
-          className="w-44 h-44 object-cover rounded-xl"
+          className="w-24 h-24 md:w-44 md:h-44 object-cover rounded-xl flex-shrink-0"
         />
 
-        <span
-          className="text-xl font-bold mt-2"
-          style={{ color: config.culoare }}
-        >
-          {fatagasita ? config.nume : "—"}
-        </span>
-
-        {fatagasita && rezultat?.incredere != null && (
-          <span className="text-sm text-gray-400">
-            {Math.round(rezultat.incredere * 100)}% incredere
+        <div className="flex flex-col gap-1">
+          <span
+            className="text-xl font-bold"
+            style={{ color: config.culoare }}
+          >
+            {fatagasita ? config.nume : "—"}
           </span>
-        )}
 
-        {/* Mesaj cand nu e fata in imagine */}
-        {rezultat !== null && !fatagasita && (
-          <span className="text-sm text-gray-500 text-center">
-            Nu am detectat nicio față
-          </span>
-        )}
+          {fatagasita && rezultat?.incredere != null && (
+            <span className="text-sm text-gray-400">
+              {Math.round(rezultat.incredere * 100)}% incredere
+            </span>
+          )}
+
+          {/* Mesaj cand nu e fata in imagine */}
+          {rezultat !== null && !fatagasita && (
+            <span className="text-sm text-gray-500">
+              Nu am detectat nicio față
+            </span>
+          )}
+        </div>
       </div>
 
       <hr className="border-gray-700" />
 
       {/* ── Lista tuturor emotiilor cu bare de progres ── */}
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-3 md:gap-4">
         {ORDINE.map((emotie) => {
           const info    = EMOTII[emotie]
           const val     = valori[emotie] ?? 0

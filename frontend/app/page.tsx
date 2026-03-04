@@ -10,10 +10,10 @@ export default function Home() {
   const [rezultat, setRezultat] = useState<RezultatEmotie | null>(null)
 
   return (
-    <main className="flex h-screen bg-gray-950 text-white overflow-hidden">
+    <main className="flex flex-col md:flex-row h-screen bg-gray-950 text-white overflow-auto md:overflow-hidden">
 
-      {/* ── Stanga: camera video cu overlay canvas ── */}
-      <div className="flex-1 flex items-center justify-center p-6">
+      {/* ── Sus (mobil) / Stanga (desktop): camera video cu overlay canvas ── */}
+      <div className="flex-1 flex items-center justify-center p-4 md:p-6">
         <WebcamCapture onRezultat={setRezultat} />
       </div>
 
