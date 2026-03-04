@@ -3,6 +3,5 @@ uvicorn[standard]
 pydantic>=2.0
 pydantic-settings>=2.0
 fer
-opencv-python-headless
 numpy<2.0
 tensorflow-cpu
