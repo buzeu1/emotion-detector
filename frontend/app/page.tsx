@@ -17,7 +17,7 @@ export default function Home() {
         <WebcamCapture onRezultat={setRezultat} />
       </div>
 
-      {/* ── Dreapta: panel cu emotiile ── */}
+      {/* ── Jos (mobil) / Dreapta (desktop): panel cu emotiile ── */}
       <EmotionOverlay rezultat={rezultat} />
 
     </main>

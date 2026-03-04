@@ -1,7 +1,18 @@
+# Nota: deploymentul foloseste Dockerfile, nu acest fisier direct.
+# Acestea sunt dependintele reale ale aplicatiei (pentru referinta / dev local):
+
 fastapi
 uvicorn[standard]
 pydantic>=2.0
 pydantic-settings>=2.0
-fer
-numpy<2.0
 tensorflow-cpu
+opencv-contrib-python-headless
+numpy<2.0
+pandas
+requests
+tqdm
+matplotlib
+Pillow
+moviepy<2.0
+ffmpeg-python
+fer==22.5.1
