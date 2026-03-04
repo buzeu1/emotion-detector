@@ -24,7 +24,7 @@ RUN pip install --no-cache-dir \
     tqdm \
     matplotlib \
     Pillow \
-    moviepy \
+    "moviepy<2.0" \
     ffmpeg-python
 
 # Instalam fer 22.5.1 (versiunea stabila) fara facenet-pytorch/torch (~1GB)
