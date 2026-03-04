@@ -4,9 +4,9 @@ import cv2
 import numpy as np
 from fer import FER
 
-# Initializam detectorul o singura data la pornirea serverului.
-# mtcnn=True = mai precis dar mai lent. Pune False daca e prea lent.
-_detector = FER(mtcnn=True)
+# mtcnn=False = foloseste OpenCV Haar cascade (mai usor, fara PyTorch)
+# mtcnn=True = mai precis dar necesita facenet-pytorch (~1GB extra)
+_detector = FER(mtcnn=False)
 
 
 def analizeaza_imagine(imagine_base64: str) -> dict:
