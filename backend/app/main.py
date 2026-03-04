@@ -1,18 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.config import settings
 from app.routers import analyze
 
 app = FastAPI(title="Emotion Detector API", version="1.0.0")
 
-# ── CORS ──────────────────────────────────────────────────────────────
-# Permite frontend-ului (ex. Vercel) sa trimita cereri catre acest server.
-# Fara asta, browserul blocheaza cererile din motive de securitate.
+# ── CORS — permite orice origine (Vercel, localhost, etc.) ────────────
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.allowed_origins,
-    allow_credentials=True,
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
