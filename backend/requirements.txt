@@ -1,5 +1,5 @@
-# Nota: deploymentul foloseste Dockerfile, nu acest fisier direct.
-# Acestea sunt dependintele reale ale aplicatiei (pentru referinta / dev local):
+# Deploymentul foloseste Dockerfile, nu acest fisier direct.
+# Lista de referinta — exact ce instaleaza Dockerfile-ul:
 
 fastapi
 uvicorn[standard]
