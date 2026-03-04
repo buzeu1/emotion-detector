@@ -127,13 +127,13 @@ export default function WebcamCapture({ onRezultat }: Props) {
   // ── Afisare camera + canvas suprapus ──────────────────────────────
   // scaleX(-1) oglindeste tot containerul (mod selfie)
   return (
-    <div className="relative inline-block" style={{ transform: "scaleX(-1)" }}>
+    <div className="relative w-full h-full md:w-auto md:h-auto md:inline-block" style={{ transform: "scaleX(-1)" }}>
       <video
         ref={videoRef}
         autoPlay
         muted
         playsInline
-        className="block max-h-[58vh] md:max-h-[85vh] rounded-xl"
+        className="block w-full h-full object-cover md:w-auto md:h-auto md:object-none md:max-h-[85vh] md:rounded-xl"
       />
       {/* Canvas-ul e pozitionat exact peste video, deseneaza dreptunghiul si emoji-ul */}
       <canvas
