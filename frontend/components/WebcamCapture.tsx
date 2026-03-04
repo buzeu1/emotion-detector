@@ -133,7 +133,7 @@ export default function WebcamCapture({ onRezultat }: Props) {
         autoPlay
         muted
         playsInline
-        className="block max-h-full rounded-xl"
+        className="block max-h-[58vh] md:max-h-[85vh] rounded-xl"
       />
       {/* Canvas-ul e pozitionat exact peste video, deseneaza dreptunghiul si emoji-ul */}
       <canvas
