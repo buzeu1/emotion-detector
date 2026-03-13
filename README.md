@@ -102,8 +102,3 @@ Backendui este scris in Python cu FastAPI si foloseste biblioteca FER pentru rec
 
 Pentru deploy, backendui este containerizat cu Docker si hostat pe **Railway**, iar frontendui este deploiat pe **Vercel** cu URL-ul backend-ului setat prin variabila de mediu.
 
----
-
-## License / Licenta
-
-MIT
